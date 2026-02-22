@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map View - Holiday Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        .leaflet-container {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <a href="index.html" class="logo">🌍 Holiday Destination</a>
+            <ul class="tab-menu">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="map.html" class="active">🗺️ Map View</a></li>
+                <li><a href="list.html">📋 List View</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>🗺️ Map View</h1>
+            <p>도시를 클릭하여 이미지를 확인하세요</p>
+        </header>
+        
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        
+        <div class="image-gallery" id="imageGallery">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 id="galleryTitle" style="margin: 0;"></h3>
+                <button id="closeGallery" style="background: #667eea; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">닫기</button>
+            </div>
+            <div class="image-grid" id="imageGrid"></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

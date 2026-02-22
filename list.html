@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List View - Holiday Destination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="top-nav-container">
+            <a href="index.html" class="logo">🌍 Holiday Destination</a>
+            <ul class="tab-menu">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="map.html">🗺️ Map View</a></li>
+                <li><a href="list.html" class="active">📋 List View</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>📋 List View</h1>
+            <p>도시별 상세 정보</p>
+        </header>
+        
+        <div class="list-container">
+            <div class="filter-section">
+                <h3>📅 월별 평균 기온</h3>
+                <input type="range" id="monthSlider" class="month-slider" min="1" max="12" value="6">
+                <div class="month-display" id="monthDisplay">6월</div>
+                <div class="temperature-display" id="temperatureDisplay">--°C</div>
+            </div>
+            
+            <div id="cityList"></div>
+        </div>
+        
+        <div class="image-gallery" id="imageGallery">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 id="galleryTitle" style="margin: 0;"></h3>
+                <button id="closeGallery" style="background: #667eea; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">닫기</button>
+            </div>
+            <div class="image-grid" id="imageGrid"></div>
+        </div>
+    </div>
+    
+    <script src="list.js"></script>
+</body>
+</html>
